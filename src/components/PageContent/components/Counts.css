@@ -1,0 +1,50 @@
+.counts {
+    display: flex;
+    flex-direction: column;
+}
+
+.count {
+    width: 258px;
+    height: 150px;
+    border-radius: 5px;
+    background: #FBFBFB;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.02);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.count-icon {
+    width: 60px;
+    height: 60px;
+    margin-left: 30px;
+}
+
+.count-column {
+    margin-left: 30px;
+}
+
+.count-value {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 700;
+    padding-top: 10px;
+    margin: 0px;
+}
+
+.count-type {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0px;
+    color: #74798C;
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+   .counts {
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 20px;
+   }
+}

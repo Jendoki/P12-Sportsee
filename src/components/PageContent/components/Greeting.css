@@ -1,0 +1,26 @@
+.greeting {
+    display: flex;
+    color: #000;
+    font-family: Roboto;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; 
+}
+
+.user-name {
+    padding-left: 10px;
+    color: #FF0101;
+}
+
+.previous-day-status {
+    margin: 0px;
+    padding: 0px;
+    color: #000;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; 
+    margin-bottom: 60px;
+}

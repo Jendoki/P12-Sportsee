@@ -1,0 +1,51 @@
+.activities {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    background: #FBFBFB;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.02);
+}
+
+.activities-custom-tooltip {
+    background-color: #e60000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+}
+
+.activities-custom-tooltip p {
+    margin: auto;
+    padding: 20px 0px;
+}
+
+.session-duration-graph {
+    background-color: red;
+    border-radius: 2%;
+}
+
+.custom-tooltip-session {
+    width: 70px;
+    background: #fff;
+    font-weight:500;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-tooltip-session label {
+    margin: auto;
+}
+
+.intensity-graph {
+    background-color: #282d30;
+    border-radius: 2%;
+}
+
+.score-graph {
+    background-color: #fbfbfb;
+    border-radius: 2%;
+}
