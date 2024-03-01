@@ -1,5 +1,6 @@
 .activities {
     width: 100%;
+    min-height: 300px;
     height: auto;
     border-radius: 5px;
     background: #FBFBFB;

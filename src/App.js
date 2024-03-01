@@ -4,7 +4,6 @@ import Sidebar from './components/Sidebar/Sidebar';
 import PageContent from './components/PageContent/PageContent';
 
 function App() {
-  // TODO: responsive 1024*720
   return (
     <div className="App">
       <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'></link>
