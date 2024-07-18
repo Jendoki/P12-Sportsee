@@ -7,9 +7,11 @@ import Score from "./components/graphs/Score"
 import Counts from "./components/Counts.js";
 import "./PageContent.css"
 import { userId } from "../../config.js"
+//import the fetch functions to pass the data to other components
 import { fetchUser, fetchUserActivity, fetchUserAverageSession, fetchUserPerformance } from "../../services/api/api.js"
 
 function PageContent() {
+    //states to keep data gotten from API
     const [isLoading, setIsLoading] = useState(true)
     const [hasError, setHasError] = useState(false)
     const [user, setUser] = useState()
@@ -20,6 +22,7 @@ function PageContent() {
     async function apiCalls() {
         setIsLoading(true)
         try {
+            //wait for all the responses from API, then set those results in the states variables
             const results = await Promise.all([fetchUser(userId), fetchUserActivity(userId), fetchUserAverageSession(userId), fetchUserPerformance(userId)])
             setUser(results[0])
             setUserActivity(results[1])
@@ -34,6 +37,7 @@ function PageContent() {
     }
 
     //useEffect(function to execute, [parameters which, when changing, will call the function again. if no parameters, only call it once])
+    //here, it is called when we arrive on the page
     useEffect(() => { apiCalls() }, [])
 
     if (hasError) {

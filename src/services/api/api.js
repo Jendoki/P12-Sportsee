@@ -19,7 +19,7 @@ const fetchUser = async (userId) => {
 }
 
 function formatUser(user) {
-    console.log(user)
+    console.log("formatUser")
     const keyMap = {
         calorieCount: "Calories",
         proteinCount: "Protéines",
@@ -67,16 +67,20 @@ function formatUserActivity(userActivity) {
 
 const fetchUserAverageSession = async (userId) => {
     if (fetchFromApi) {
+        //here, we wait for the response form API before continuing
         const response = await axios.get(`http://localhost:5000/user/${userId}/average-sessions`);
+        //format the response to get the expected data format
         const result = formatUserAverageSession(response.data.data);
         return result;
     } else {
+        //if fetchFromApi is falsy, we get the data from the mock and format it
         const result = formatUserAverageSession(USER_AVERAGE_SESSIONS)
         return result;
     }
 }
 
 function formatUserAverageSession(userAverageSession) {
+    //replace day 'number' (1, 2, 3...) by the first letter of the day
     const days = ["L", "M", "M", "J", "V", "S", "D"];
     userAverageSession.sessions.forEach((session, index) => {
         session.day = days[index];
